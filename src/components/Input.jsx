@@ -2,7 +2,7 @@
 import { useId } from "react";
 import { IconContext } from "react-icons";
 
-const Input = ({ icon: Icon, label, type, name, value, onChange, required,placeholder }) => {
+const Input = ({ icon: Icon, label, type, name, value, onChange, required,placeholder,...props }) => {
     const id = useId()
     return (
         <div className="mb-2">
@@ -22,6 +22,7 @@ const Input = ({ icon: Icon, label, type, name, value, onChange, required,placeh
                 required={required}
                 autoComplete="off"
                 id={id}
+                {...props}
             />
         </div>
     );

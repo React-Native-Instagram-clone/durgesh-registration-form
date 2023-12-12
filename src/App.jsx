@@ -110,7 +110,8 @@ function App() {
             value={formData.mobileNumber}
             onChange={handleChange}
             required
-            placeholder="Enter your mobile number"
+            pattern="[0-9]{10}"
+            placeholder="Enter your mobile number (10 digits)"
           />
           <button type="submit" className="btn btn-primary mt-2">
             Register
